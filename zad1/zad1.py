@@ -245,11 +245,11 @@ if __name__ == '__main__':
     sjf.run()
     sjf_x, sjf_y= sjf.get_results()
 
-    srf = SRF(processes, time_quantum=100)
+    srf = SRF(processes, time_quantum=50)
     srf.run()
     srf_x, srf_y= srf.get_results()
 
-    rr = RR(processes, time_quantum=100)
+    rr = RR(processes, time_quantum=50)
     rr.run()
     rr_x, rr_y = rr.get_results()
 

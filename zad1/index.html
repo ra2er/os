@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!-- Dołącz bibliotekę jwplayera -->
+    <script src="http://jwpsrv.com/library/5FSC3i6wEeSbXyIACtqXBA.js"></script>
+</head>
+
+<!-- Wstaw poniższy kod gdziekolwiek wewnątrz tagu <body>. -->
+<body>
+    <div id="jwplayer">
+        <p class="no-items">
+            Nie udało się zainicować flash playera. Prosimy włączyć obsługę flasha w przeglądarce lub odtwarzaj w systemowym playerze.
+            Jeżeli odpowiedni player nie otworzył się, skopiuj jeden z linków poniżej i wklej go do pożądanego playera zgodnie z Twoim systemem operacyjnym.
+        </p>
+    </div>
+    <script type="text/javascript">
+        jwplayer('jwplayer').setup({
+            height: '30',
+            sources: [{
+                file: 'http://stream4.nadaje.com:14706/ork;stream',
+                type: 'mp3'
+            }],
+            fallback: false,
+            primary: 'flash',
+        });
+    </script>
+</body>
+</html>
