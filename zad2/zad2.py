@@ -5,7 +5,7 @@ import random
 
 class Disk(object):
 
-    BLOCK_MOVE_TIME = 3 # ms
+    BLOCK_MOVE_TIME = 1 # ms
 
     def __init__(self, blocksCount):
         self.tasks = []
@@ -102,7 +102,6 @@ class Disk(object):
                     tasks.pop(tasks.index(position))
                     num += 1
 
-
     def c_scan(self, add_realtime_process=False):
         prefix = 'with_realtime_process_' if add_realtime_process else ''
         position = 500
@@ -165,7 +164,7 @@ if __name__ == '__main__':
         plt.plot(x, y, label=f)
     plt.legend(bbox_to_anchor=(1, 1), loc=2,
                borderaxespad=0.)
-    plt.axis([1, 120, 10, 150000])
+    plt.axis([1, 100, 10, 35000])
     plt.xlabel('Processes count')
     plt.ylabel('Time elapsed [ms]')
     plt.yscale('log')
